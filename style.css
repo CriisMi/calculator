@@ -1,19 +1,15 @@
-
+/*style*/
 .display,
 .keypad {
-    width: 200px;
+    width: 220px;
     margin: 10px;
     border-style: solid;
     border-width: 1px;
     border-color: black;
 }
-
-
-.display {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.enter {
+    width: 210px;
+    margin: 5px;
 }
 
 .display-text {
@@ -21,13 +17,6 @@
     font-size: 30px;
 }
 
-.keypad {
-    height: 200px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
 button {
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
@@ -38,7 +27,31 @@ button {
     height: 45px;
 }
 
-.row {
+/* position diplay  */
+.display {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-part {
     display: flex;
     justify-content: space-between;
+}
+
+.numbers,
+.operators {
+    height: 200px;
+    width: 150px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.operators {
+    width: 45px;
+    align-items: center;
 }
