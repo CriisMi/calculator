@@ -24,6 +24,7 @@ button {
     flex: 1 1 40px;
 }
 
+
 /* position */
 
 .display {
@@ -31,6 +32,14 @@ button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.top-part {
+display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin: 5px;
 }
 
 .bot-part {

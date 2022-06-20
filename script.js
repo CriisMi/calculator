@@ -13,3 +13,11 @@ const divide = (a, b) => {
 const operate = (operator, a, b) => {
     return operator(a, b);
 }
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert('Hello');
+    });
+});
