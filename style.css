@@ -7,14 +7,12 @@
     border-width: 1px;
     border-color: black;
 }
-.enter {
-    width: 210px;
-    margin: 5px;
-}
+
 
 .display-text {
     font-family: 'Courier New', Courier, monospace;
     font-size: 30px;
+    margin: 5px;
 }
 
 button {
@@ -23,11 +21,11 @@ button {
     padding: 0;
     border-radius: 0%;
     border: 0;
-    width: 45px;
-    height: 45px;
+    flex: 1 1 40px;
 }
 
-/* position diplay  */
+/* position */
+
 .display {
     height: 50px;
     display: flex;
@@ -35,23 +33,26 @@ button {
     justify-content: flex-end;
 }
 
-.top-part {
+.bot-part {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .numbers,
 .operators {
+    
     height: 200px;
     width: 150px;
     padding: 5px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+    align-items: stretch;
     justify-content: space-between;
+    gap: 5px
 }
 
 .operators {
     width: 45px;
-    align-items: center;
 }
