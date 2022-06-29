@@ -1,3 +1,10 @@
+/* to do 
+ - accept float numbs
+ - give error if diveded by 0
+ - resize display text to fit large numbers
+ - add keyboard support */
+
+
 
 const sum = (a, b) => {
     return a + b;
@@ -84,10 +91,21 @@ buttons.forEach((button) => {
 
             case 'number':
                 if (prevOperator == '=') {
-                    firstNum = firstNum * 10 + parseInt(e.target.innerText);    
+                    firstNum = firstNum * 10 + parseInt(e.target.innerText);
                 } else {
                     secondNum = secondNum * 10 + parseInt(e.target.innerText);
                 }
+
+                /* //display error and clear if divide by 0
+                if (prevOperator == '/' && secondNum == 0) {
+                    display.innerText = 'ERROR';
+                    setTimeout(function(){
+                        clearDisplay();
+                        prevOperator = '=';
+                        firstNum = 0;
+                        secondNum = 0; 
+                    }, 10000); 
+                } */s
                 display.innerText += e.target.innerText;
                 break;
 
@@ -107,7 +125,7 @@ buttons.forEach((button) => {
                 operation = signToWord(prevOperator);
                 display.innerText = operate(operation, firstNum, secondNum);
                 prevOperator = '=';
-                firstNum = 0;
+                firstNum = operate(operation, firstNum, secondNum);
                 secondNum = 0;
                 break;
             case 'point':
